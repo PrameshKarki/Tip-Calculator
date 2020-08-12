@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Tip Calculator</h1>
+            <hr />
+            <label for="bill-amount">How much is the bill?</label>
+            <input type="number" name="bill-amount" id="bill-amount" min="0" placeholder="Bill Amount" />
+            <label for="percentage">How much would you like to tip?</label>
+            <select name="percentage" id="percentage" required>
+                <option value="0">0%</option>
+                <option value="1">1%</option>
+                <option value="2">2%</option>
+                <option value="3">3%</option>
+                <option value="4">4%</option>
+                <option value="5" selected>5%</option>
+                <option value="7">7%</option>
+                <option value="10">10%</option>
+            </select>
+            <div class="amount-container">
+                <div class="amount">
+                    <p>Total Tip</p>
+                    <p>Rs <span id="total-tip">0.00</span></p>
+                </div>
+                <div class="amount">
+                    <p>Total Amount</p>
+                    <p>Rs <span id="total-amount">0.00</span></p>
+                </div>
+            </div>
+            <hr />
+            <label for="person-number">How many people are sharing the bill?</label>
+            <input type="number" name="personNumber" id="person-number" placeholder="Number of people" min="1"
+                max="15" />
+            <div class="amount-container">
+                <div class="amount">
+                    <p>Tip Each</p>
+                    <p>Rs <span id="each-tip">0.00</span></p>
+                </div>
+                <div class="amount">
+                    <p>Amount Each</p>
+                    <p>Rs <span id="each-amount">0.00</span></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
