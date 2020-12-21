@@ -1,5 +1,5 @@
 ### Tip Calculator
-Simple web that calculates tip.
+A simple web app that calculates the tip.
 
 #### Screenshot:
 <img src="Screenshot\Screenshot.JPG" alt="Screenshot" width=250>
