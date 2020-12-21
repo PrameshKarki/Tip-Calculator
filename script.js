@@ -23,8 +23,8 @@ let resetData = () => {
     totalAmount.innerText = 0;
     if (numberOfPeople.value !== '') {
         numberOfPeople.value = 0;
-        amountEach.innerText = 0;
-        tipEach.innerText = 0;
+        amountEach.innerText = 0.00;
+        tipEach.innerText = 0.00;
     }
 
 }
@@ -76,9 +76,20 @@ let calculateBillAmount = () => {
 
 //Listening event
 billAmount.addEventListener('keyup', calculateBillAmount);
-tipPercentage.addEventListener('change',calculateBillAmount)
+tipPercentage.addEventListener('change', calculateBillAmount)
 
 numberOfPeople.addEventListener('keyup', () => {
+    let value = numberOfPeople.value;
+    if (validateNumberOfPerson()) {
+        populateEach(value);
+    }
+    else {
+        amountEach.innerText = 0.00;
+        tipEach.innerText = 0.00;
+    }
+})
+//Change Event
+numberOfPeople.addEventListener('change', () => {
     let value = numberOfPeople.value;
     if (validateNumberOfPerson()) {
         populateEach(value);
